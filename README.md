@@ -1,15 +1,34 @@
+// README.md
 # Nox API
+### Introduction
+Nox-API is an open source Rest API, that handles all the heavy lifting a Minecraft server would typically need to do in the background.
+### Project Support Features
+* Chat Filtering
+* Cache Basic Data (UUID, Name, Primary Rank, Last Login)
+* More coming soon...
+### Installation Guide
+* Clone this repository [here](https://github.com/ericvegax/nox-api.git).
+* The main branch is the most stable branch at any given time, ensure you're working from it.
+* Run npm install to install all dependencies
+* Setup your Redis Server/Database
+* Create an .env file in your project root folder and add your variables. See .env.sample for assistance.
+### Usage
+* Run npm start:dev to start the application.
+* Connect to the API using Postman on port 7066.
+### API Endpoints
+| HTTP Verbs | Endpoints | Action |
+| --- | --- | --- |
+| POST | /api/chat/filter | Filters a chat message |
+| POST | /api/login | Adds & Updates player data |
+### Technologies Used
+* [NodeJS](https://nodejs.org/) This is a cross-platform runtime environment built on Chrome's V8 JavaScript engine used in running JavaScript codes on the server. It allows for installation and managing of dependencies and communication with databases.
 
-The Nox API provides an easy to use back-end for any and all types of Minecraft Servers; powered by TypeScript & Redis, this back-end can handle the heavy lifting in the background, allowing your Developers to focus on developing plugins that make changes to the experience of your player-base.
+* [ExpressJS](https://www.expresjs.org/) This is a NodeJS web application framework.
 
-## Features
-## TechStack
-## Examples
-## Routes
-## Author
-## Notes
-- Cache basic data (playername, uuid, rank, currency, etc...)
-- Filter in-game chat when requested
-- Update plugins live, without needing to restart the server
-- Save complex data to the used database (postgres or mongodb)
-- In the future this API will be re-created in GoLang for better performance
+* [Redis](https://redis.io/) Redis is an advanced, open-source, in-memory data structure store used as a database, cache, and message broker.
+
+* [TypeScript](https://mongoosejs.com/) TypeScript is a statically typed superset of JavaScript, designed and maintained by Microsoft. It builds on JavaScript by adding optional static types, interfaces, and other features that enable developers to write more robust, scalable, and maintainable code.
+### Authors
+* [Eric Vega](https://github.com/ericvegax)
+### License
+This project is available for use under the MIT License.

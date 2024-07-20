@@ -2,9 +2,9 @@ import Route, { Method } from "../Route";
 import { Request, Response } from "express";
 import Filter from 'bad-words'; 
 
-class ChatFilter extends Route {
+const filter: Filter = new Filter();
 
-    private filter: Filter = new Filter();
+class ChatFilter extends Route {
 
     constructor() {
         super('/chat');
@@ -13,7 +13,7 @@ class ChatFilter extends Route {
 
     async onChat(req: Request, res: Response) {
         /* sends back the filtered chat message to the client */
-        res.json(this.filter.clean(req.body.message));
+        res.json(filter.clean(req.body.message));
     }
 }
 
