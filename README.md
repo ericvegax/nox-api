@@ -7,7 +7,7 @@ Nox-API is an open source Rest API, that handles all the heavy lifting a Minecra
 * Cache Basic Data (UUID, Name, Primary Rank, Last Login)
 * More coming soon...
 ### Installation Guide
-* Clone this repository [here](https://github.com/ericvegax/nox-api.git).
+* Clone this repository [here](https://github.com/ericvegax/nox-api).
 * The main branch is the most stable branch at any given time, ensure you're working from it.
 * Run npm install to install all dependencies
 * Setup your Redis Server/Database
