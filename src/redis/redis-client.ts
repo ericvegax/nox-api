@@ -1,9 +1,9 @@
 // This module will use the configuration and Redis client modules to connect to Redis.
 
-import { createRedisClient, getConfig } from "./redis-config";
+import { createRedisClient, getRedisConfig } from "./redis-config";
 import { RedisClient, RedisClientImpl } from "./redis-connection";
 
-const config = getConfig();
+const config = getRedisConfig();
 export const redisClient = new RedisClientImpl(createRedisClient(config));
 
 redisClient.onError((err) => {

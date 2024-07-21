@@ -11,7 +11,7 @@ interface RedisConfig {
     port: number
 }
 
-export const getConfig = (): RedisConfig => ({
+export const getRedisConfig = (): RedisConfig => ({
     password: process.env.REDIS_PASSWORD || '',
     host: process.env.REDIS_HOST || '127.0.0.1',
     port: parseInt(process.env.REDIS_PORT || '6379', 10)

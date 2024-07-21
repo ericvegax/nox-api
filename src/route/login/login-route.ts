@@ -10,10 +10,10 @@ class LoginRoute extends Route {
     }
 
     onLogin(req: Request, res: Response) {
-        const { name, uuid } = req.body;
+        const { name, uuid, primaryRank } = req.body;
 
-        controller.savePlayer(name, uuid)
-        .then((player) => res.status(200).json([player, {uuid: player?.uuid}]))
+        controller.savePlayer(name, uuid, (primaryRank !== null ? primaryRank : "default"))
+        .then((player) => res.status(200).json(player))
         .catch((error) => res.status(500).json(error));
         console.log(`[Login] Fetched player data: ${name}`.magenta);
     }

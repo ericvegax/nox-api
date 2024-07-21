@@ -28,6 +28,10 @@ export class RedisClientImpl implements RedisClient {
         return await this.client.get(key);
     }
 
+    async bgSave(): Promise<void> {
+        await this.client.bgSave();
+    }
+
     async disconnect(): Promise<void> {
         await this.client.disconnect();
     }
