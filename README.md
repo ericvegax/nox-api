@@ -22,7 +22,7 @@ Nox-API is an open source Rest API, that handles all the heavy lifting a Minecra
 ### Technologies Used
 * [NodeJS](https://nodejs.org/) This is a cross-platform runtime environment built on Chrome's V8 JavaScript engine used in running JavaScript codes on the server. It allows for installation and managing of dependencies and communication with databases.
 
-* [ExpressJS](https://www.expresjs.org/) This is a NodeJS web application framework.
+* [ExpressJS](https://expressjs.com/) This is a NodeJS web application framework.
 
 * [Redis](https://redis.io/) Redis is an advanced, open-source, in-memory data structure store used as a database, cache, and message broker.
 
