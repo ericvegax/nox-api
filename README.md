@@ -18,7 +18,6 @@ Nox-API is an open source Rest API, that handles all the heavy lifting a Minecra
 | HTTP Verbs | Endpoints | Action |
 | --- | --- | --- |
 | POST | /api/chat/filter | Filters a chat message |
-| POST | /api/login | Adds & Updates player data |
 ### Technologies Used
 * [NodeJS](https://nodejs.org/) This is a cross-platform runtime environment built on Chrome's V8 JavaScript engine used in running JavaScript codes on the server. It allows for installation and managing of dependencies and communication with databases.
 
