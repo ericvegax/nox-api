@@ -21,6 +21,8 @@ export const savePlayer = async (name: string, uuid: string, rank?: string): Pro
         } else { // Player exists
             await redisClient.set(`player:${uuid}:name`, name);
             await redisClient.set(`player:${uuid}:lastLogin`, Date.now().toString());
+            
+            if (rank !== null) await redisClient.set(`player:${uuid}:primaryRank`, rank!);
         }
 
         return player;
