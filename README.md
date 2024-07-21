@@ -12,12 +12,13 @@ Nox-API is an open source Rest API, that handles all the heavy lifting a Minecra
 * Setup your Redis Server/Database
 * Create an .env file in your project root folder and add your variables. See .env.sample for assistance.
 ### Usage
-* Run npm start:dev to start the application.
-* Connect to the API using Postman on port 7066.
+* Run `npm run start` to start the application.
+* Connect to the API using Postman on port 3000.
 ### API Endpoints
 | HTTP Verbs | Endpoints | Action |
 | --- | --- | --- |
-| POST | /api/chat/filter | Filters a chat message |
+| POST | /api/chat/filter | filters a chat message |
+| POST | /api/login | update & save player data to the redis cache |
 ### Technologies Used
 * [NodeJS](https://nodejs.org/) This is a cross-platform runtime environment built on Chrome's V8 JavaScript engine used in running JavaScript codes on the server. It allows for installation and managing of dependencies and communication with databases.
 

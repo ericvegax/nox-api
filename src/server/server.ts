@@ -7,7 +7,7 @@ import * as routes from './routes';
 
 export class Server {
     
-    constructor(private app: express.Application = express(), private port: number = parseInt(process.env.PORT!) || 3000) {
+    constructor(private app: express.Application = express(), private port: number = parseInt(process.env.API_PORT!) || 3000) {
         this.app.use(bodyParser.urlencoded({ extended: true }));
         this.app.use(cors());
         this.app.use(express.json());
