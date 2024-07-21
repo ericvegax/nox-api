@@ -26,7 +26,7 @@ Nox-API is an open source Rest API, that handles all the heavy lifting a Minecra
 
 * [Redis](https://redis.io/) Redis is an advanced, open-source, in-memory data structure store used as a database, cache, and message broker.
 
-* [TypeScript](https://mongoosejs.com/) TypeScript is a statically typed superset of JavaScript, designed and maintained by Microsoft. It builds on JavaScript by adding optional static types, interfaces, and other features that enable developers to write more robust, scalable, and maintainable code.
+* [TypeScript](https://www.typescriptlang.org/) TypeScript is a statically typed superset of JavaScript, designed and maintained by Microsoft. It builds on JavaScript by adding optional static types, interfaces, and other features that enable developers to write more robust, scalable, and maintainable code.
 ### Authors
 * [Eric Vega](https://github.com/ericvegax)
 ### License
