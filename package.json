@@ -33,6 +33,11 @@
     "redis": "^4.6.15"
   },
   "devDependencies": {
-    "@types/bad-words": "^3.0.3"
+    "@types/bad-words": "^3.0.3",
+    "@types/jest": "^29.5.12",
+    "@types/supertest": "^6.0.2",
+    "jest": "^29.7.0",
+    "supertest": "^7.0.0",
+    "ts-jest": "^29.2.3"
   }
 }
