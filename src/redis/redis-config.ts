@@ -26,23 +26,3 @@ export const createRedisClient = (config: RedisConfig): RedisClientType => {
         }
     });
 }
-
-// export const client = createClient({
-//     password: process.env.REDIS_PASSWORD,
-//     socket: {
-//         host: process.env.REDIS_HOST,
-//         port: parseInt(process.env.REDIS_PORT || '6379', 10)
-//     }
-// });
-
-// client.on('error', (err) => {
-//     console.error('Redis Client Error'.red, err);
-// });
-
-// export const connectRedis = async () => {
-//     try {
-//         await client.connect();
-//     } catch (error) {
-//         console.error("Error connecting to Redis".red, error);
-//     }
-// }
