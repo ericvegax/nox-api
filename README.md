@@ -10,7 +10,7 @@ Nox-API is an open source Rest API, that handles all the heavy lifting a Minecra
 * The main branch is the most stable branch at any given time, ensure you're working from it.
 * Run npm install to install all dependencies
 * Setup your Redis Server/Database
-* Create an .env file in your project root folder and add your variables. See .env.sample for assistance.
+* Create an `.env` file in your project root folder and add your variables. See `.env.sample` for assistance.
 ### Usage
 * Run `npm run start` to start the application.
 * Connect to the API using Postman on port 3000.
