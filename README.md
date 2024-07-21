@@ -1,4 +1,3 @@
-// README.md
 # Nox API
 ### Introduction
 Nox-API is an open source Rest API, that handles all the heavy lifting a Minecraft server would typically need to do in the background.
