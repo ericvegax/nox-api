@@ -15,6 +15,7 @@ class LoginRoute extends Route {
         controller.savePlayer(name, uuid)
         .then((player) => res.status(200).json([player, {uuid: player?.uuid}]))
         .catch((error) => res.status(500).json(error));
+        console.log(`[Login] Fetched player data: ${name}`.magenta);
     }
 }
 

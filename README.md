@@ -1,7 +1,7 @@
 # Nox API
 ### Introduction
 Nox-API is an open source Rest API, that handles all the heavy lifting a Minecraft server would typically need to do in the background.
-### Project Support Features
+### Project Features
 * Chat Filtering
 * Cache Basic Data (UUID, Name, Primary Rank, Last Login)
 * More coming soon...
