@@ -5,7 +5,7 @@ import express, { Router, Request, Response } from "express";
  * @class Route
  * @description represents a route/end-point in the Nox API
  */
-class Route {
+abstract class Route {
 
     constructor(public basePath: string, public router: Router = express.Router()) {}
 
