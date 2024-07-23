@@ -1,5 +1,5 @@
 import { redisClient } from "../../redis/redis-client";
-import { IPlayer } from "./login-model";
+import { Player } from "./login-model";
 
 /**
  * @note manipulates player data
@@ -8,7 +8,7 @@ import { IPlayer } from "./login-model";
  * whenever a new player logs in, we store their uuid, and name (store rank if specified) in the Cache; when a player
  * leaves, we update their name & last login.
  */
-export const savePlayer = async (name: string, uuid: string, rank?: string): Promise<IPlayer | null> => {
+export const savePlayer = async (name: string, uuid: string, rank?: string): Promise<Player | null> => {
     try {
         const player = await getPlayer(uuid);
 
@@ -33,7 +33,7 @@ export const savePlayer = async (name: string, uuid: string, rank?: string): Pro
 };
 
 // Function to check if a player exists in Redis
-async function getPlayer(uuid: string): Promise<IPlayer | null> {
+async function getPlayer(uuid: string): Promise<Player | null> {
     const name = await redisClient.get(`player:${uuid}:name`);
     const rank = await redisClient.get(`player:${uuid}:primaryRank`);
 
