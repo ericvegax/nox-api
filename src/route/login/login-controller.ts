@@ -11,18 +11,19 @@ import { Player } from "./login-model";
 export const savePlayer = async (name: string, uuid: string, rank?: string): Promise<Player | null> => {
     try {
         const player = await getPlayer(uuid);
+        const timestamp = Date.now().toString();
 
         if (player === null) { // Player does not exist
             await redisClient.set(`player:${uuid}:uuid`, uuid);
             await redisClient.set(`player:${uuid}:name`, name);
-            await redisClient.set(`player:${uuid}:lastLogin`, Date.now().toString());
+            await redisClient.set(`player:${uuid}:lastLogin`, timestamp);
 
-            if (rank !== null) await redisClient.set(`player:${uuid}:primaryRank`, rank!);
+            if (rank) await redisClient.set(`player:${uuid}:primaryRank`, rank!);
         } else { // Player exists
             await redisClient.set(`player:${uuid}:name`, name);
-            await redisClient.set(`player:${uuid}:lastLogin`, Date.now().toString());
+            await redisClient.set(`player:${uuid}:lastLogin`, timestamp);
             
-            if (rank !== null) await redisClient.set(`player:${uuid}:primaryRank`, rank!);
+            if (rank) await redisClient.set(`player:${uuid}:primaryRank`, rank!);
         }
 
         return player;
@@ -33,7 +34,7 @@ export const savePlayer = async (name: string, uuid: string, rank?: string): Pro
 };
 
 // Function to check if a player exists in Redis
-async function getPlayer(uuid: string): Promise<Player | null> {
+export async function getPlayer(uuid: string): Promise<Player | null> {
     const name = await redisClient.get(`player:${uuid}:name`);
     const rank = await redisClient.get(`player:${uuid}:primaryRank`);
 
