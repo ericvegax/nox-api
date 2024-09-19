@@ -14,9 +14,11 @@ class LoginRoute extends Route {
 
     controller
       .savePlayer(name, uuid, primaryRank !== null ? primaryRank : "default")
-      .then((player) => res.status(200).json(player))
+      .then((player) => {
+        res.status(200).json(player);
+        console.log(`[Login] Saved player data: ${name}`.magenta);
+      })
       .catch((error) => res.status(500).json(error));
-    console.log(`[Login] Saved player data: ${name}`.magenta);
   }
 
   getPlayerData(req: Request, res: Response) {

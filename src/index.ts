@@ -9,3 +9,4 @@ connectRedis(redisClient);
 // starts express server connection
 server.setRoutes();
 server.startServer();
+
